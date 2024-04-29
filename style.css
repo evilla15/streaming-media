@@ -1,7 +1,197 @@
+:root {
+    --dk-blue1: #020659;
+    --dk-blue2: #020873;
+    --dk-blue3: #030A8C;
+    --lt-blue1: #2104D9;
+    --lt-blue2: #0D8DFB;
+    --lt-blue3: #2699FB;
+    --purple: #590242;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+    background-color: var(--dk-blue1);
+}
+
+body {
+    width: 375px;
+    margin: 0 auto;
+    background-color: white;
+}
+#trending {
+    width: 375px;
+    display: flex;
+    overflow: scroll;
+    scrollbar-color: var(--purple);
+    scrollbar-width: thin;
+}
+
+#playlists {
+    width: 375px;
+    display: flex;
+    overflow: scroll;
+    background-color: var(--lt-blue3);
+    scrollbar-color: var(--dk-blue1);
+    scrollbar-width: thin;
+    margin: 20px;
+}
+
+#curated {
+    width: 375px;
+    display: flex;
+    overflow: scroll;
+    background-color: var(--dk-blue3);
+    scrollbar-color: var(--dk-blue1);
+    scrollbar-width: thin;
+    margin: 20px;
+}
+
+#trending p {
+    top: 66%;
+    position: relative;
+    color: var(--purple);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#playlists section {
+    background-color: var(--lt-blue2);
+    padding: 10px;
+    margin: 10px;
+}
+
+#curated section {
+    background-color: var(--dk-blue2);
+    padding: 10px;
+    margin: 10px;
+}
+
+section h2 {
+    top: 70%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/*
+#trending ::-webkit-scrollbar {
+    scrollbar-color: var(--purple);
+}
+
+#trending ::-webkit-scrollbar-track {
+    scrollbar-color: var(--purple);
+}
+
+#trending ::-webkit-scrollbar-thumb {
+    scrollbar-color: var(--purple);
+}
+
+#trending ::-webkit-scrollbar-thumb:hover {
+    color: var(--dk-blue1);
+}
+
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    color: var(--dk-blue1);
+}
+
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    color: var(--dk-blue1);
+}
+
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    color: var(--dk-blue1);
+}
+
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    color: var(--dk-blue1);
+}
+*/
+
+audio::-webkit-media-controls-mute-button {
+    background-color: white;
+    border-radius: 50px;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: white;
+    border-radius: 50px;
+}
+
+audio {
+    bottom: 43%;
+    position: relative;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+nav {
+    background-color: var(--dk-blue3);
+    padding: 4px;
+}
+
+nav a {
+    color: white;
+}
+
+main a {
+    color: white;
+    background-color: var(--purple);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+header {
+    background-image: linear-gradient(to right, var(--lt-blue1), black);
+    padding: 5px;
+}
+
+h1 {
+    font-size: 1.25em;
+    font-family: Raleway Bold, sans-serif;
+    color: white;
+}
+
+h2 {
+    font-size: 1em;
+    font-family: Raleway Bold, sans-serif;
+    color: var(--purple);
+    padding: 10px;
+}
+
+h3 {
+    font-size: 1em;
+    font-family: Raleway Bold, sans-serif;
+    color: white;
+}
+
+p, dl, dd {
+    font-size: 1em;
+    color: white;
+}
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.75em;
+    font-family: Raleway Bold, sans-serif;
+    color: var(--purple);
+}
+
+/* ------------------------------------------- add --------------------*/
 ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
+    list-style: none;
+    text-align: center;
 }
 label {
     cursor: pointer;
@@ -52,7 +242,14 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     top: 0;
 }
 
+/* ------------------ media query -------------------------------------------- */
 @media screen and (min-width:834px) {
+    body {
+        width:834px;
+    }
+    #trending {
+        width: 834px;
+    }
     ul {
         overflow: visible;
         position: absolute;
